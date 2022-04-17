@@ -1,0 +1,2 @@
+20220416	18:08:53	8b127ad9-f909-4dd4-86db-dda0f11387c9	SyntaxError: Unexpected token / in JSON at position 29
+20220416	23:25:23	099d942f-b5ef-4525-8ec6-5c895f195915	Error: Not allowed by CORS
