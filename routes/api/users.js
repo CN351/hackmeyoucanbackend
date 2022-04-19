@@ -4,11 +4,10 @@ const userController = require('../../controllers/userController');
 
 router.route('/')
     .get(userController.getUserData)
-    // .post(userController.createNewEmployee)
-    // .put(userController.updateEmployee)
-    // .delete(userController.deleteEmployee);
 
-// router.route('/:id')
-//     .get(employeesController.getEmployee);
+router.route('/data')
+    .get(userController.getAllUserData)
+
+
 
 module.exports = router;
