@@ -12,7 +12,7 @@ const verifyJWT = require('./middleware/verifyJWT');
 const cookieParser = require('cookie-parser');
 const credentials = require('./middleware/credentials');
 const PORT = process.env.PORT || 3500;
-
+const bodyParser = require('body-parser')
 // custom middleware logger
 app.use(logger);
 
@@ -25,13 +25,14 @@ app.use(cors(corsOptions));
 
 // built-in middleware to handle urlencoded form data
 app.use(express.urlencoded({ extended: false }));
+app.use(express.json({limit: '50mb'}));
+app.use(express.urlencoded({limit: '50mb'}));
 
 // built-in middleware for json 
-app.use(express.json());
+// app.use(express.json());
 
 //middleware for cookies
 app.use(cookieParser());
-
 //serve static files
 app.use('/', express.static(path.join(__dirname, '/public')));
 
@@ -42,8 +43,9 @@ app.use('/auth', require('./routes/auth'));
 app.use('/refresh', require('./routes/refresh'));
 app.use('/logout', require('./routes/logout'));
 
-app.use(verifyJWT);
+// app.use(verifyJWT);
 app.use('/users', require('./routes/api/users'));
+app.use('/image',require('./routes/api/image'))
 
 
 app.all('*', (req, res) => {
