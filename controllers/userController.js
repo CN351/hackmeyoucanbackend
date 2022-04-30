@@ -29,6 +29,29 @@ const getAllUserData = async (req, res) => {
     res.status(200).send(foundUser)
 }
 
+const updateUserData = async(req,res) =>{
+    const { user, email, name, phone, cardid } = req.body;
+    User.updateOne({"user":user},{
+        "$set":{
+            user:user,
+            email,email,
+            name:name,
+            phone:phone,
+            cardid:cardid
+        }
+    })
+    res.status(200).send("Success")
+
+}
 
 
-module.exports = { getUserData, getAllUserData }
+const deleteUser = async(req,res) =>{
+    const {user} = req.body.user;
+    User.deleteOne({user:user})
+    res.status(200).send("Success")
+
+
+}
+
+
+module.exports = { getUserData, getAllUserData, updateUserData, deleteUser }

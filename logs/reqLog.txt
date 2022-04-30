@@ -291,3 +291,12 @@
 20220428	23:36:14	7ac55f3e-0497-47c4-9c6d-873ad3ab20f9	POST	undefined	/image/save
 20220428	23:37:03	c2d03a29-52b1-4307-8363-c23a6931c6a2	POST	undefined	/image/save
 20220428	23:37:41	e18f3828-fac6-4895-a3b7-010c5747115a	GET	undefined	/image
+20220429	00:40:22	3341e62d-ea7f-4334-bce8-e10c337cd443	GET	http://localhost:3000	/image
+20220429	00:40:37	b8db1d5f-0a17-4462-92ca-2128b0366cee	OPTIONS	http://localhost:3000	/auth
+20220429	00:40:37	d49e5f65-c9a7-4ada-8850-36de4a31a304	POST	http://localhost:3000	/auth
+20220429	00:40:38	5be46d77-65d0-4a74-903c-3d81f9ec12a0	GET	http://localhost:3000	/image
+20220429	00:41:00	ed41e786-bfa2-4923-81f6-e2189b5af25b	OPTIONS	http://localhost:3000	/auth
+20220429	00:41:00	fd1f8e57-415c-418e-beb0-82b9906743ea	POST	http://localhost:3000	/auth
+20220429	00:41:33	a63194b2-d3cc-4d1c-8f3f-1dfdd1e35ba3	OPTIONS	http://localhost:3000	/image/save
+20220429	00:41:33	23c49fb0-a97c-4a54-aa82-8990a724cb45	POST	http://localhost:3000	/image/save
+20220429	00:41:38	b6638d6a-9379-4b91-8001-cd4d7158eeb3	GET	http://localhost:3000	/image
