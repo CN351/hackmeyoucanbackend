@@ -2,3 +2,23 @@
 20220416	23:25:23	099d942f-b5ef-4525-8ec6-5c895f195915	Error: Not allowed by CORS
 20220428	23:33:15	bd6481a3-3038-4fe6-ad03-51cf89cc03d2	PayloadTooLargeError: request entity too large
 20220428	23:35:44	50b141b7-2b0d-443d-855b-b20383e3887a	PayloadTooLargeError: request entity too large
+20220502	21:47:26	2ead874d-a5d0-4382-bb99-90d520036a54	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Topology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+20220502	21:48:35	69a7c004-a001-4d1b-a702-8ca688310e5c	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Topology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+20220502	21:50:26	d38339c7-eb5b-4d76-b4d0-428227aff6de	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Topology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+20220502	21:52:08	7abde5f4-1531-421d-8569-57a2a16d3f07	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Topology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle

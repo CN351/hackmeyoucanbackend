@@ -7,7 +7,7 @@ const getImage = async (req,res) =>{
 
 
 const saveImage = async (req,res)=>{
-    const body =req.body
+    const body = req.body
     console.log(body);
     const newImg = new Image({
         "image":body.image

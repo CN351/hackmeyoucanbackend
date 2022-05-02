@@ -23,32 +23,38 @@ const getAllUserData = async (req, res) => {
 
     const foundUser = await User.find()
         .then((data) => {
-            return data
+            let tempdata = []
+            data.forEach(element => {
+                tempdata.push({ username: element.username, name: element.name, email: element.email, phone: element.phone, cardid: element.cardid })
+            });
+            return tempdata
         }).catch((error) => { console.log(error) })
+
 
     res.status(200).send(foundUser)
 }
 
-const updateUserData = async(req,res) =>{
-    const { user, email, name, phone, cardid } = req.body;
-    User.updateOne({"user":user},{
-        "$set":{
-            user:user,
-            email,email,
-            name:name,
-            phone:phone,
-            cardid:cardid
+const updateUserData = async (req, res) => {
+    const { username, email, name, phone, cardid } = req.body;
+    console.log(username, email, name, phone, cardid);
+    const data = await User.updateOne({ "username": username }, {
+        "$set": {
+            username: username,
+            email: email,
+            name: name,
+            phone: phone,
+            cardid: cardid
         }
     })
-    res.status(200).send("Success")
+    res.status(200).json({ data: data, message: "Success" })
 
 }
 
 
-const deleteUser = async(req,res) =>{
-    const {user} = req.body.user;
-    User.deleteOne({user:user})
-    res.status(200).send("Success")
+const deleteUser = async (req, res) => {
+    const { username } = req.params;
+    const data = await User.deleteOne({ "username": username })
+    res.status(200).send({ data: data, message: "Success" })
 
 
 }
